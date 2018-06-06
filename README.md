@@ -48,6 +48,7 @@ Most important:
 
 - `DISCORD_WH_URL`: The discord URL to the main discord webhook for the GitLab events
 - `WH_TOKEN`: The secret token of the webhook, keep it secret!
+- `GITLAB_BASE_URL`: The base URL of your GitLab's instance (Without '/' at the end!)
 
 ## Features roadmap
 
