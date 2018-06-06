@@ -49,6 +49,12 @@ Most important:
 - `DISCORD_WH_URL`: The discord URL to the main discord webhook for the GitLab events
 - `WH_TOKEN`: The secret token of the webhook, keep it secret!
 
+## Features roadmap
+
+- Quick install with Docker
+- Merge request events support
+- Add test with PHPUnit
+
 ## License
 
 The project is MIT licensed. To read the full license, view LICENSE.md.
