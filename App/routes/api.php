@@ -8,4 +8,4 @@
 |
 */
 $app->get('/', [\App\Controllers\PagesController::class, 'getHome']);
-$app->post('/event', [\App\Controllers\GitLabSystemHookController::class, 'newEvent']);
+$app->post('/event', [\App\Controllers\GitLabSystemHookController::class, 'newEvent'])->add(new \App\Middlewares\MustHaveTokenMiddleware($container->get('gitlab')['wh_token']));
