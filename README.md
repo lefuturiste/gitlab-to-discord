@@ -6,13 +6,39 @@ Simple API server to listen the GitLab system event and transmit to a discord we
 
 ### Docker
 
-coming soon...
+Docker image: [Available here](https://hub.docker.com/r/lefuturiste/gitlab-to-discord/)
+
+#### Usage
+
+Run the container by this command
+
+```
+docker run -d -e APP_ENV_NAME='production' \
+-e APP_DEBUG='1' \
+-e DISCORD_WH_URL='https://discordapp.com/api/webhooks/ID/TOKEN' \
+-e WH_TOKEN='YOUR_TOKEN' \
+-e GITLAB_BASE_URL='https://gitlab.compagny.com' \
+-p 0.0.0.0:4880:80 \
+--name gitlab-to-discord lefuturiste/gitlab-to-discord
+```
+
+This will run the container and publish the port 80 on the port 4880 on your machine, you can change it! Change also the environments vars. It's highly recommended to use a proxy to access to the http server.
 
 ### Manual
+
+### Requirements
+
+- PHP 7.1 or higher
+- [Composer](https://getcomposer.org)
+- Nginx is highly recommended
+
+### Steps by steps
 
 - Clone this repository
 - composer install
 - Create a .env file in the root directory and fill it with environment variables fields (you can get the list of the fields in .env.example or by the doc bellow)
+
+For nginx user, there is a example of configuration in `nginx.conf`.
 
 ### Add it to your GitLab instance
 
@@ -53,6 +79,7 @@ Most important:
 ## Features roadmap
 
 - Quick install with Docker
+- Locales support (fr, en, de, es)
 - Merge request events support
 - Add test with PHPUnit
 

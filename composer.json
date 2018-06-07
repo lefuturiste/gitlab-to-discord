@@ -16,11 +16,9 @@
     "license": "MIT",
     "require": {
         "slim/slim": "^3.8",
-        "hassankhan/config": "^0.10.0",
         "guzzlehttp/guzzle": "^6.3",
         "jimmiw/php-time-ago": "^2.0",
         "vlucas/phpdotenv": "^2.4",
-        "simplon/mysql": "^2.2",
         "monolog/monolog": "^1.23",
         "symfony/console": "^3.3",
         "symfony/translation": "^3.3",
